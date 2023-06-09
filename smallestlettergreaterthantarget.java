@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/find-smallest-letter-greater-than-target/submissions/
 class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
         int start = 0;
@@ -10,7 +11,7 @@ class Solution {
             if(letters[mid]<=target){
                 start = mid+1;
             }
-            else if(letters[mid]>target){
+            else{
                 end = mid-1;
             }
 
