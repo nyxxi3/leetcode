@@ -16,6 +16,8 @@ class Solution:
             if heap:
                 heapq.heappop(heap)
                 count+=1
+            if e==n and not heap:
+                break
         return count
                 
 
