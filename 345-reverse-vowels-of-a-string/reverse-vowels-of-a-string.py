@@ -6,7 +6,7 @@ class Solution:
         #else if one of the pointer is in vowel other is not shift only the pointer in non-vowel
         # if both of them not in vowels move pointers
         #release when no chars left anymore (start < end)
-        vowels = ["a","e","i","o","u","A","E","I","O","U"]
+        vowels = set("aeiouAEIOU")
         s = list(s)
         start = 0
         end = len(s)-1
