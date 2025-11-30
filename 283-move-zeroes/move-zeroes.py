@@ -1,18 +1,6 @@
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        zero_count = 0
-        copy = []
-        for n in nums:
-            copy.append(n)
-        for e in copy:
-            if e == 0:
-                nums.remove(e)
-                zero_count += 1
-        while zero_count > 0:
-            nums.append(0)
-            zero_count -= 1
-        
-        
+    def moveZeroes(self, nums):
+        append_times=nums.count(0)
+        for i in range(append_times):
+            nums.remove(0) #  Delete the front zero
+            nums.append(0) # append it at the end of nums, the times of the addition and substraction shall be equal
