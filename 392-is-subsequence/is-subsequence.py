@@ -1,11 +1,10 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        s = list(s)
-        t=list(t)
-        slow = 0
-        c = len(s)
         if not s:
             return True
+        slow = 0
+        c = len(s)
+ 
         for fast in range(len(t)):
             if slow < len(s) and s[slow] == t[fast]:
                 c -= 1
