@@ -1,6 +1,12 @@
 class Solution:
-    def moveZeroes(self, nums):
-        append_times=nums.count(0)
-        for i in range(append_times):
-            nums.remove(0) #  Delete the front zero
-            nums.append(0) # append it at the end of nums, the times of the addition and substraction shall be equal
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        
+        slow = 0
+        for fast in range(len(nums)):
+            if nums[fast] != 0 and nums[slow] == 0:
+                nums[slow],nums[fast] = nums[fast],nums[slow]
+            if nums[slow] != 0:
+                slow += 1
