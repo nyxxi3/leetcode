@@ -7,7 +7,7 @@ class Solution:
         copy = []
         for n in nums:
             copy.append(n)
-        for i,e in enumerate(copy):
+        for e in copy:
             if e == 0:
                 nums.remove(e)
                 zero_count += 1
