@@ -1,7 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        brackets = {'}' : '{', ')':'(',']':'['}
+        brackets = {"}":"{",")":"(","]":"["}
         for b in s:
             if b in brackets:
                 if stack and stack[-1] == brackets[b]:
@@ -11,3 +11,4 @@ class Solution:
             else:
                 stack.append(b)
         return True if not stack else False
+        # ) (| )
